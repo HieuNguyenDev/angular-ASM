@@ -1,0 +1,68 @@
+<form class="mt-3" #frmTask="ngForm" (ngSubmit)="editTask(frmTask.value)">
+    <h5 class="bg-warning p-2">SỬA TASK</h5>
+    <p class="mb-3">ID 
+        <input type="name" name="id" [(ngModel)]="dataTask.id" class="form-control" #error_nameTask="ngModel"
+        required minlength="4">
+    </p>
+    <p class="mb-3">Tên task 
+        <input type="name" name="tenTask" [(ngModel)]="dataTask.tenTask" class="form-control" #error_nameTask="ngModel"
+        required minlength="4">
+    </p>
+    <p>
+        <span *ngIf="error_nameTask.errors?.['required']" class="text-danger">Bạn cần nhập tên công việc</span>
+        <span *ngIf="error_nameTask.errors?.['minlength']" class="text-danger">Tên công việc tối thiểu 4 ký tự</span>
+    </p>
+    <p class="mb-3">Mô tả 
+        <textarea  name="moTa" [(ngModel)]="dataTask.moTa" class="form-control" #error_descriptionTask="ngModel"
+        required minlength="4"></textarea>
+    </p>
+    <p>
+        <span *ngIf="error_descriptionTask.errors?.['required']" class="text-danger">Bạn cần nhập mô tả công việc</span>
+        <span *ngIf="error_descriptionTask.errors?.['minlength']" class="text-danger">Mô tả công việc tối thiểu 10 ký tự</span>
+    </p>
+    <!-- <p class="mb-3">
+        Dự án 
+        <select class="form-control" name="duAnID">
+            <option *ngFor="let project of projects" [value]="0">{{project.tenDuAn}}</option>
+        </select>
+    </p>
+    <p class="mb-3">Người thực hiện 
+        <select class="form-control" id="nhanvienID" name="nhanvienID" >
+            <option *ngFor="let employee of employees">{{employee.hoten}}</option>
+        </select>
+    </p>
+    <p class="mb-3">Trạng thái 
+        <select class="form-control">
+            <option [value]="0">Chưa hoàn thành</option>
+            <option [value]="1">Chuẩn bị thực hiện</option>
+            <option [value]="2">Đang thực hiện</option>
+            <option [value]="3">Đã hoàn thành</option>
+        </select>
+    </p> -->
+    <!-- Test -->
+    <p class="mb-3">
+        Dự án 
+        <select class="form-control" name="duAnID">
+            <div *ngFor="let project of projects">
+                <option  *ngIf="tasks.idDuAn === project.id" value="">{{project.tenDuAn}}</option>
+            </div>
+            <option *ngFor="let project of projects" value="" >{{project.tenDuAn}}</option>
+        </select>
+    </p>
+    <p class="mb-3">Người thực hiện 
+        <select class="form-control" id="nhanvienID" name="nhanvienID" >
+            <option *ngFor="let employee of employees">{{employee.hoten}}</option>
+        </select>
+    </p>
+    <p class="mb-3">Trạng thái 
+        <select class="form-control">
+            <option [value]="0">Chưa hoàn thành</option>
+            <option [value]="1">Chuẩn bị thực hiện</option>
+            <option [value]="2">Đang thực hiện</option>
+            <option [value]="3">Đã hoàn thành</option>
+        </select>
+    </p>
+    <p><button class="btn btn-primary p-2">Sửa Task</button></p>
+</form>
+
+

@@ -1,0 +1,36 @@
+<h4 class="bg-warning mt-3 p-2">DANH SÁCH TASK</h4>
+<div *ngFor="let task of tasks" class="mb-3">
+    <div class="mb-3 border-bottom row"> 
+        <p><b>Tên dự án: </b>{{task.tenTask}}</p>
+        <p><b>Mô tả: </b>{{task.moTa}}</p>
+    </div>
+    <div class="mb-3 border-bottom row">
+        <div class="col-6">
+            <div [ngSwitch]="task.priority">
+                <p *ngSwitchCase="0"><b>Độ ưu tiên: </b>Không ưu tiên</p>
+                <p *ngSwitchCase="1"><b>Độ ưu tiên: </b>Rất ưu tiên</p>
+                <p *ngSwitchCase="2"><b>Độ ưu tiên: </b>Ưu tiên</p>
+            </div>
+            <div [ngSwitch]="task.status">
+                <p *ngSwitchCase="0"><b>Trạng thái: </b>Chưa hoàn thành</p>
+                <p *ngSwitchCase="1"><b>Trạng thái: </b>Đang thực hiện</p>
+                <p *ngSwitchCase="2"><b>Trạng thái: </b>Đã hoàn thành</p>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div *ngFor="let employee of employees">
+                <p *ngIf="task.nhanvienID === employee.id"><b>Nhân viên:</b> {{employee.hoten}}</p>
+            </div>
+            <div *ngFor="let project of projects">
+                <p *ngIf="task.duAnID === project.id"><b>Dự án:</b> {{project.tenDuAn}}</p><br>
+            </div>
+            <div>
+                <a class="btn btn-primary" routerLink="edit-task/{{task.id}}">Sửa</a>
+                <a class="btn btn-danger" (click)="deleteTask(task.id)">Xóa</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+

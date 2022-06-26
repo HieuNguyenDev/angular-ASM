@@ -1,0 +1,194 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "tenDuAn": "Quản lý nhân viên",
+      "ngayStart": "2022-01-01",
+      "tien": 5000000,
+      "leader": 1,
+      "thanhvien": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": 2,
+      "tenDuAn": "Xây dựng website bán hàng",
+      "ngayStart": "2022-02-01",
+      "tien": 3000000,
+      "leader": 1,
+      "thanhvien": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 3,
+      "tenDuAn": "Xây dựng website về đồ ăn nhanh",
+      "ngayStart": "2022-04-01",
+      "tien": 8000000,
+      "leader": 2,
+      "thanhvien": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "tenDuAn": "Quản lý sinh viên",
+      "ngayStart": "2022-05-01",
+      "tien": 6000000,
+      "leader": 1,
+      "thanhvien": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": 5,
+      "tenDuAn": "Xây dựng website du lịch",
+      "ngayStart": "2022-06-01",
+      "tien": 10000000,
+      "leader": 1,
+      "thanhvien": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "tenDuAn": "update",
+      "ngayStart": "2022-06-16",
+      "tien": 111111
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "tenTask": "Phân tích yêu cầu",
+      "duAnID": 1,
+      "nhanvienID": 1,
+      "moTa": "Phân tích các yêu cầu của khách hàng để team thực hiện",
+      "status": 0,
+      "priority": 1
+    },
+    {
+      "id": 2,
+      "tenTask": "Thực hiện layout cho ứng dụng",
+      "duAnID": 1,
+      "nhanvienID": 2,
+      "moTa": "Thực hiện layout website, chú ý kỹ responsive",
+      "status": 0,
+      "priority": 2
+    },
+    {
+      "id": 3,
+      "tenTask": "Tìm hiểu yêu cầu của khách hàng",
+      "duAnID": 2,
+      "nhanvienID": 3,
+      "moTa": "Đến công ty và ghi nhận các yêu cầu của khách hàng",
+      "status": 0,
+      "priority": 2
+    },
+    {
+      "id": 4,
+      "tenTask": "Đăng ký thành viên",
+      "duAnID": 3,
+      "nhanvienID": 4,
+      "moTa": "Thực hiện chức năng đăng ký, có capcha, mail kích hoạt",
+      "status": 0,
+      "priority": 1
+    },
+    {
+      "id": 5,
+      "tenTask": "Đổi pass, quên pass",
+      "duAnID": 1,
+      "nhanvienID": 4,
+      "moTa": "Thực hiện chức năng đỗi pass, quên pass. Nhớ kiểm tra user login, email tồn tại, pass cũ hợp lệ ",
+      "status": 1,
+      "priority": 1
+    },
+    {
+      "id": 6,
+      "tenTask": "Testing 1",
+      "duAnID": 4,
+      "nhanvienID": 3,
+      "moTa": "Kiểm tra mọi form chức năng theo các case đã liệt kê",
+      "status": 0,
+      "priority": 2
+    },
+    {
+      "id": 7,
+      "tenTask": "Triển khai website",
+      "duAnID": 5,
+      "nhanvienID": 4,
+      "moTa": "Triển khai website lên hosting đã mua",
+      "status": 0,
+      "priority": 2
+    },
+    {
+      "id": 8,
+      "tenTask": "Hướng dẫn sử dụng và bàn giao",
+      "duAnID": 5,
+      "nhanvienID": 1,
+      "moTa": "Hướng dẫn sử dụng cho khách hàng",
+      "status": 0,
+      "priority": 2
+    },
+    {
+      "id": 9,
+      "tenTask": "Testing 2",
+      "duAnID": 4,
+      "nhanvienID": 2,
+      "moTa": "Kiểm tra các tính năng bảo mật theo các yêu cầu đã nêu trong tài liệu dự án",
+      "status": 0,
+      "priority": 2
+    },
+    {
+      "tenTask": "1111",
+      "moTa": "description",
+      "duAnID": "2",
+      "nhanvienID": "3",
+      "id": 11
+    },
+    {
+      "id": 12,
+      "tenTask": "Thực hiện layout cho ứng dụng",
+      "moTa": "sfsdfsdf"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "hoten": "Nguyễn Minh Hiếu",
+      "ngaysinh": "2002-11-25",
+      "phai": true,
+      "khuvuc": "Nam",
+      "sodienthoai": "0123345678"
+    },
+    {
+      "id": 2,
+      "hoten": "Nguyễn Văn A",
+      "ngaysinh": "2002-11-25",
+      "phai": true,
+      "khuvuc": "Nam",
+      "sodienthoai": "0453675421"
+    },
+    {
+      "id": 3,
+      "hoten": "Phan Thị B",
+      "ngaysinh": "2002-11-25",
+      "phai": false,
+      "khuvuc": "Bắc",
+      "sodienthoai": "0456792330"
+    },
+    {
+      "id": 4,
+      "hoten": "Nguyễn Trần Văn C",
+      "ngaysinh": "2002-11-25",
+      "phai": true,
+      "khuvuc": "Trung",
+      "sodienthoai": "0395673453"
+    }
+  ]
+}

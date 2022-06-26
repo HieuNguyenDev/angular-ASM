@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'asm1';
+  title = ''
+
+  projectApp: any;
+  ganProject(project: any) {
+    this.projectApp = project;
+  }
+
+  constructor( private auth:AuthService){}
+  thoat(){ this.auth.thoat();  }
+
+  daDangNhap() { return this.auth.daDangNhap()}
 }
